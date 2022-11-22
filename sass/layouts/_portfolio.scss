@@ -1,0 +1,90 @@
+.list-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.list-buttons__btn {
+  display: inline-block;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+
+  font-family: inherit;
+  font-style: normal;
+  @include font(16px, 500, 1.63, 0.03em);
+  text-align: center;
+
+  color: var(--primary-text-color);
+  background-color: var(--secondary-bg-color);
+
+  transition: background-color var(--transition), color var(--transition),
+    box-shadow var(--transition);
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  > .card-list__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+
+.top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-wrap__descr {
+  position: absolute;
+
+  top: 0;
+  padding: 63px 24px;
+  color: var(--white-color);
+  background: rgba(33, 150, 243, 0.9);
+
+  @include font(18px, 400, 1.6, 0.03em);
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform var(--transition);
+  .card-list__link:hover &,
+  .card-list__link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-wrap {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+
+.card-list__title {
+  @include font(18px, null, 2, 0.06em);
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+
+.card-list__text {
+  @include font(16px, 400, 1.88, 0.03em);
+  color: var(--secondary-text-color);
+}
+
+.card-list__link {
+  display: block;
+
+  transition: box-shadow var(--transition);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

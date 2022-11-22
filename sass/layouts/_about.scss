@@ -1,0 +1,28 @@
+.about {
+  padding-top: 0;
+}
+.img-list {
+  display: flex;
+  gap: 30px;
+}
+
+.img-list__wrap {
+  position: relative;
+}
+
+.img-list__text {
+  position: absolute;
+
+  bottom: 0;
+  color: var(--white-color);
+  background: rgba(47, 48, 58, 0.8);
+
+  @include font(null, 700, 1.1, null);
+  text-transform: uppercase;
+  height: 70px;
+  width: 100%;
+
+  @extend %align-list;
+  text-align: center;
+  justify-content: center;
+}

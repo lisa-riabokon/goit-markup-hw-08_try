@@ -1,0 +1,21 @@
+body {
+  font-family: 'roboto', sans-serif;
+  color: var(--primary-text-color);
+  background: var(--white-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.list {
+  list-style: none;
+}
+
+.link {
+  @include font(14px, 500, 1.14, 0.02em);
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}

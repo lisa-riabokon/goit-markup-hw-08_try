@@ -1,0 +1,18 @@
+.btn {
+  @extend %align-list;
+  font-family: inherit;
+  font-style: normal;
+  @include font(16px, 700, 1.88, 0.06em);
+  margin: 0 auto;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  transition: background-color var(--transition);
+  &:hover,
+  &:focus {
+    background-color: var(--hover-btn);
+  }
+}

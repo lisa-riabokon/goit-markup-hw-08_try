@@ -1,0 +1,26 @@
+.pic-list {
+  display: flex;
+  gap: 30px;
+}
+
+.pic-list__item {
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+}
+
+.pic-list__link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+  @extend %align-list;
+  justify-content: center;
+  fill: var(--icons-color);
+
+  transition: border-color var(--transition), fill var(--transition);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}
