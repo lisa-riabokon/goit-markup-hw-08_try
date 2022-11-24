@@ -4,10 +4,15 @@
 .people-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 
-  @media screen and (min-width: 768px) {
-    width: calc((100% - 30px) / 2);
-  }
+  // @media screen and (max-width: 1199px) {
+  //   flex-wrap: wrap;
+  // }
+
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: calc((100% - 30px) / 2);
+  // }
 }
 
 .people-list__item {
