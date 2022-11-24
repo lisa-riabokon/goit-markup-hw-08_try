@@ -541,8 +541,8 @@ body {
 
 .people-list {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .people-list__item {
@@ -552,10 +552,21 @@ body {
   border-radius: 0px 0px 4px 4px;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .people-list__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .people-list__item {
+    width: calc((100% - 90px) / 4);
+  }
+}
 
 .people-list__wrap {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  display: block;
+  padding: 30px 0;
+  text-align: center;
 }
 
 .people-list__title {

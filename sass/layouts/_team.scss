@@ -3,31 +3,32 @@
 }
 .people-list {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
-
-  // @media screen and (max-width: 1199px) {
-  //   flex-wrap: wrap;
-  // }
-
-  // @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //   width: calc((100% - 30px) / 2);
-  // }
+  gap: 30px;
 }
 
 .people-list__item {
   width: 100%;
+
   background: var(--white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   display: block;
+
+  @media screen and (min-width: 768px) {
+    @include formula(2, 30px);
+  }
+  @media screen and (min-width: 1200px) {
+    @include formula(4, 30px);
+  }
 }
 
 .people-list__wrap {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  display: block;
+  padding: 30px 0;
+  text-align: center;
 }
 
 .people-list__title {

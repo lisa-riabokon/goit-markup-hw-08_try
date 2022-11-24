@@ -4,3 +4,7 @@
   line-height: $height;
   letter-spacing: $spacing;
 }
+
+@mixin formula($count, $gap) {
+  width: calc((100% - $gap * (count - 1)) / $count);
+}
