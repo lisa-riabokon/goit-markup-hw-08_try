@@ -4,10 +4,14 @@
 .people-list {
   display: flex;
   gap: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .people-list__item {
-  width: 270px;
+  width: 100%;
   background: var(--white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
